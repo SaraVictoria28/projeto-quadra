@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, rgb(221, 245, 245), #4e378c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 90vh;
+    width: 100vw;
+    padding-top: 80px;
+}
+
+main {
+    background: azure;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 20px (0, 0, 0, 0.2);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form h2 {
+    text-align: center;
+    color: #3a2869;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #3a2869;
+}
+
+button {
+    padding: 12px;
+    background-color: #7a59e0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a2869;
+}
+
+.error {
+    color: rgb(234, 82, 82);
+    font-size: 15px;
+    text-align: center;
+}
+
+.mensagem {
+    text-align: center;
+}
+
+.gerenciador {
+    background: azure;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 40%;
+    width: 100%;
+    box-shadow: 0 8px 20px (0, 0, 0, 0.2);
+}
+
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.campo-gerenciador {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.campo-gerenciador h1 {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+select:focus {
+    border-color: #3a2869;
+}
+
+
+header {
+    width: 100%;
+    height: 8vh;
+    background-color: #3a2869;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    box-shadow: 0 2px 8px (0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /*coloca o cabeçalho em cima de qualquer outro elemento da página */
+}
+
+.barra-configuracao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.barra-configuracao span {
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
