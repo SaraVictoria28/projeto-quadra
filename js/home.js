@@ -14,10 +14,6 @@ reservaBtn.addEventListener("click", async () => {
   const data = document.getElementById("reservar-data").value;
   const hora = document.getElementById("reservar-horario").value;
 
-    // ... outras declarações ...
-  console.log("Valor do nome:", nome);
-  console.log("Valor da hora:", hora); // Adicione esta linha
-  // ... restante do código ...
   if (!nome || !quadra || !esporte || !data || !hora) {
     erroReserva.textContent = "Por favor, preencha todos os campos.";
     return;
@@ -31,7 +27,7 @@ reservaBtn.addEventListener("click", async () => {
       return;
     }
 
-    const reservaRef = ref(db, `reservas/${user.uid}`);
+       const reservaRef = ref(db, `reservas/${user.uid}`);
     await push(reservaRef, {
       nome,
       quadra,
@@ -45,4 +41,12 @@ reservaBtn.addEventListener("click", async () => {
   } catch (error) {
     erroReserva.textContent = "Erro ao reservar: " + error.message;
   }
+});
+
+
+
+const btnReservas = document.getElementById("minhas-reservas");
+
+btnReservas.addEventListener('click', () => {
+  window.location.href = "reservas.html";
 });

@@ -116,7 +116,7 @@ header {
     background-color: #3a2869;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 20px;
     color: white;
     box-shadow: 0 2px 8px (0, 0, 0, 0.1);
@@ -124,7 +124,6 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    /*coloca o cabeçalho em cima de qualquer outro elemento da página */
 }
 
 .barra-configuracao {
@@ -141,4 +140,97 @@ header {
     background-color: white;
     border-radius: 2px;
     transition: 0.3s;
+}
+
+
+/*///////////////////////////////////////////////*/
+
+/* Estilos para a página de Minhas Reservas (reservas.html) */
+
+.minhas-reservas-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: sans-serif;
+    /* Mantém o fundo gradiente e alinhamento central */
+    background: linear-gradient(to right, rgb(221, 245, 245), #4e378c);
+    min-height: 90vh;
+    width: 100vw;
+    padding-top: 80px; /* Considera a altura do header fixo */
+}
+
+.minhas-reservas-page h1 {
+    color: #3a2869;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#lista-reservas {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+#lista-reservas > div {
+    background-color: azure; /* Usa a mesma cor de fundo do main */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Usa o mesmo border-radius do main */
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Usa a mesma box-shadow do main */
+}
+
+#lista-reservas > div strong {
+    font-weight: bold;
+    color: #3a2869; /* Usa a mesma cor do h2 dos formulários */
+    display: block;
+    margin-bottom: 5px;
+}
+
+#lista-reservas > div p {
+    margin: 5px 0;
+    color: #555;
+}
+
+#lista-reservas > div hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#lista-reservas > p {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Estilos para o botão "Voltar" (adicionado no script) */
+#voltar-home {
+    padding: 12px 20px;
+    background-color: #7a59e0; /* Cor do botão principal */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Mesmo border-radius dos botões */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 20px; /* Espaçamento abaixo do botão */
+}
+
+#voltar-home:hover {
+    background-color: #3a2869; /* Cor do hover dos botões */
+}
+
+/* Ajustes para telas menores (opcional) */
+@media (max-width: 768px) {
+    #lista-reservas {
+        width: 95%;
+    }
+
+    .minhas-reservas-page h1 {
+        font-size: 24px;
+    }
 }
